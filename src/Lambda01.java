@@ -15,13 +15,46 @@ public class Lambda01 {
 
 */
 
-        List<Integer> sayi = new ArrayList<>(Arrays.asList(34,22,16,11,35,20,63,21,65,44,66,64,81,38,15));
+        List<Integer> sayi = new ArrayList<>(Arrays.asList(34, 22, 16, 11, 35, 20, 63, 21, 65, 44, 66, 64, 81, 38, 15));
 
+        printElStructured(sayi);
+        System.out.println();
+        printElFunctional(sayi);
+        System.out.println();
+        printElFunctional1(sayi);
+        System.out.println();
+        printElFunctional2(sayi);
+
+    }
         //TASK  : "Structured Programming" kullanarak list elemanlarını aynı satirda
         // aralarında bosluk olacak sekilde print ediniz.
 
-        for(int w:sayi){
-            System.out.print(w+" ");
+       public static void printElStructured(List<Integer> sayi){
+           for(Integer w:sayi){
+               System.out.print(w +" ");
+           }
+
         }
+    //TASK  : "functional Programming" kullanarak list elemanlarını aynı satirda aralarında bosluk olacak sekilde print ediniz.
+    public static void printElFunctional(List<Integer> sayi){
+                sayi.
+                        stream().
+                forEach((t)-> System.out.print(t+" "));//Lambda expression
+    }
+
+    public static void printElFunctional1(List<Integer> sayi){
+                sayi.
+                stream().
+                forEach( System.out::print);//method reference kullanmak daha mantikli ve kolay
+    }
+        //--->kendimiz bir method olusturalim ve cagiralim
+    public static void yazdir(int a){
+        System.out.print(a +" ");
+    }
+
+    public static void printElFunctional2(List<Integer> sayi){
+        sayi.
+                stream().
+                forEach(Lambda01::yazdir);
     }
 }
