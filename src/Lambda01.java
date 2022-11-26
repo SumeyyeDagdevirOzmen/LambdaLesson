@@ -24,6 +24,14 @@ public class Lambda01 {
         printElFunctional1(sayi);
         System.out.println();
         printElFunctional2(sayi);
+        System.out.println();
+        printCiftElFunctional(sayi);
+        System.out.println();
+        printCiftElStructured(sayi);
+        System.out.println();
+        printCiftOtzKckFunctional(sayi);
+        System.out.println();
+        printCiftOtzBykFunctional(sayi);
 
     }
         //TASK  : "Structured Programming" kullanarak list elemanlarını aynı satirda
@@ -57,4 +65,69 @@ public class Lambda01 {
                 stream().
                 forEach(Lambda01::yazdir);
     }
+    //TASK  : functional Programming ile list elemanlarinin  cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
+    public static void printCiftElFunctional(List<Integer> sayi){
+        sayi.
+                stream().
+                filter(t->t%2==0).//Lambda Expression(Lambda Expression: Hala nasıl çalışacağını söylüyorsun)
+                forEach(Lambda01::yazdir);
+
+    }
+
+    //Yukaridaki Task'i filter() kismini method referance ile yapalim.
+
+    public static boolean ciftBul(int a){
+        return a%2 ==0;
+
+    }
+    public static void printCiftElFunctional1(List<Integer> sayi){
+        sayi.
+                stream().
+                filter(Lambda01::ciftBul).//Method referance(Methodu referans olarak aldik.
+                forEach(Lambda01::yazdir);
+
+    }
+    //TASK  : Structural Programming ile list elemanlarinin  cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
+    public static void printCiftElStructured(List<Integer> sayi){
+        for(Integer w:sayi){
+            if(w%2==0){
+                System.out.print(w+" ");
+            }
+        }
+    }
+  //TASK :functional Programming ile list elemanlarinin 34 den kucuk cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
+    public static void printCiftOtzKckFunctional(List<Integer> sayi){
+        sayi.
+                stream().
+                filter(t->t%2==0 && t<34).
+                forEach(Lambda01::yazdir);
+
+    }
+    //Task : functional Programming ile list elemanlarinin 34 den buyk veya cift olanlarini ayni satirda aralarina bosluk birakarak print ediniz.
+
+    public static void printCiftOtzBykFunctional(List<Integer> sayi){
+        sayi.
+                stream().
+                filter(t->t%2==0 || t>34).
+                forEach(Lambda01::yazdir);//forEach((t)-> System.out.print(t+" "));
+
+    }
+
+
 }
+/*
+// TASK  : Yukarıdaki functional yapıdaki filter methodunun icini method referance ile yapalim
+public static void modAl(int sayi){
+
+    if (sayi% 2 == 0){
+        System.out.print(sayi + " ");
+    }
+
+}
+
+public static void printCifElFunctional2(List<Integer> sayi){
+    sayi.
+            stream().filter(t->t % 2 == 0). // lamda expression
+            forEach(Lambda01::modAl);
+}
+ */
