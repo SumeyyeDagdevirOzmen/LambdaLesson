@@ -167,8 +167,8 @@ public class Lambda02 {
 
    /*
    Note:
-    eger biz ilave birseyler yazmadan  hazir java methodlarindan cagiriyor isek "Method  reference" ;
-    biz ilave biseyler yaziyor isek "lambda expression"  oluyor.
+    Eger ilave birseyler yazmadan  hazir java methodlarindan cagiriyor isek "Method  reference",
+    ilave biseyler yaziyor isek "lambda expression"  kullaniyoruz.
     Optinal deger almak istemiyorsan Lambda Expression kullanmalisin.
 
      */
