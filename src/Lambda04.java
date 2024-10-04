@@ -24,6 +24,7 @@ fields --> Universite (String)
         System.out.println(matBolumVarMi(unv));
         System.out.println();
         System.out.println(ogrSayisiBykSirala(unv));
+        System.out.println();
         System.out.println(matBolumSayisi(unv));
         System.out.println();
         System.out.println(ogrncSayisi550BykMaxOrt(unv));

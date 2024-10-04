@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class Lambda01 {
     public static void main(String[] args) {
@@ -59,6 +60,12 @@ public class Lambda01 {
     public static void yazdir(int a){
         System.out.print(a +" ");
     }
+//String ifadeleri yazdirmak icin method olusturdum
+    public static void stringYazdir(String a){
+        System.out.print(a +" ");
+    }
+
+
 
     public static void printElFunctional2(List<Integer> sayi){
         sayi.
@@ -114,7 +121,9 @@ public class Lambda01 {
     }
 
 
+
 }
+
 /*
 // TASK  : Yukarıdaki functional yapıdaki filter methodunun icini method referance ile yapalim
 public static void modAl(int sayi){

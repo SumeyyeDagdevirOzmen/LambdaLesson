@@ -117,7 +117,7 @@ public static void xIleBitenElemanKontrol(List<String> ikram) {
     public static void ilkElHrcSonHrfSiraliPrint(List<String>ikram){
         ikram.stream().//Akis saglandi
                 sorted(Comparator.comparing(t->t.charAt(t.length()-1))).//Son harfine gore alfabetik siralandi
-                skip(1).//Akisdaki ilk eleman haric tutuldu
+                skip(1).//Akisdaki ilk birinci eleman haric tutuldu
                 forEach(Lambda03::yazdir);//ekrana print edildi
 
         //skip ilk n elemanı atlar limit ilk n elemanı gösterir
